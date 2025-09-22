@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         // Load script.py file from assets or main/python
         PyObject module = py.getModule("script");
 
-//        // Call main() function inside script.py
-//        PyObject num = module.callAttr("main");
-//
-//        // Just to check result in Logcat
-//        System.out.println("Python says: " + num.toString());
+        // Call main() function inside script.py
+        PyObject num = module.callAttr("main");
+
+        // Just to check result in Logcat
+        System.out.println("Python says: " + num.toString());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
